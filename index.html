@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before & After Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Before & After Image Uploader</h1>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Upload a New Set</h2>
+            <form id="upload-form">
+                <input type="text" id="title" name="title" placeholder="Enter Title" required>
+                <textarea id="description" name="description" placeholder="Enter Description" required></textarea>
+                
+                <div class="file-inputs">
+                    <div>
+                        <label for="beforeImage">Before Image:</label>
+                        <input type="file" id="beforeImage" name="beforeImage" accept="image/*" required>
+                        <img id="before-preview" class="preview" src="#" alt="Before image preview" />
+                    </div>
+                    <div>
+                        <label for="afterImage">After Image:</label>
+                        <input type="file" id="afterImage" name="afterImage" accept="image/*" required>
+                        <img id="after-preview" class="preview" src="#" alt="After image preview" />
+                    </div>
+                </div>
+                
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+
+        <section class="gallery-container">
+            <h2>Gallery</h2>
+            <div id="image-grid">
+                </div>
+        </section>
+    </main>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Edit Entry</h2>
+            <form id="edit-form">
+                <input type="hidden" id="edit-id" name="id">
+                <input type="text" id="edit-title" name="title" required>
+                <textarea id="edit-description" name="description" required></textarea>
+                
+                <div class="file-inputs">
+                     <div>
+                        <label for="edit-beforeImage">Replace Before Image (optional):</label>
+                        <input type="file" id="edit-beforeImage" name="beforeImage" accept="image/*">
+                    </div>
+                    <div>
+                        <label for="edit-afterImage">Replace After Image (optional):</label>
+                        <input type="file" id="edit-afterImage" name="afterImage" accept="image/*">
+                    </div>
+                </div>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
