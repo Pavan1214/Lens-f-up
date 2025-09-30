@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <header>
@@ -32,10 +34,10 @@
             <form id="upload-form">
                 <input type="text" id="title" name="title" placeholder="Enter Title" required>
                 <textarea id="description" name="description" placeholder="Enter Description" required></textarea>
-                
+
                 <div class="file-inputs">
                     <div>
-                        <label for="beforeImage">Before Image:</label>
+                        <label for="beforeImage">Before Image (Optional):</label>
                         <input type="file" id="beforeImage" name="beforeImage" accept="image/*">
                         <img id="before-preview" class="preview" src="#" alt="Before image preview" />
                     </div>
@@ -45,7 +47,7 @@
                         <img id="after-preview" class="preview" src="#" alt="After image preview" />
                     </div>
                 </div>
-                
+
                 <button type="submit">Upload</button>
             </form>
         </section>
@@ -53,7 +55,7 @@
         <section class="gallery-container">
             <h2>Gallery Management</h2>
             <div id="image-grid">
-                </div>
+            </div>
         </section>
     </main>
 
@@ -65,9 +67,9 @@
                 <input type="hidden" id="edit-id" name="id">
                 <input type="text" id="edit-title" name="title" required>
                 <textarea id="edit-description" name="description" required></textarea>
-                
+
                 <div class="file-inputs">
-                     <div>
+                    <div>
                         <label for="edit-beforeImage">Replace Before Image (optional):</label>
                         <input type="file" id="edit-beforeImage" name="beforeImage" accept="image/*">
                     </div>
@@ -84,4 +86,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
