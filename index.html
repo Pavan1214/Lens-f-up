@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Before & After Gallery</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1>Before & After Image Uploader</h1>
+        <h1>Admin Dashboard</h1>
     </header>
 
     <main>
+        <section class="stats-container">
+            <h2>Site Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Unique Visitors</h3>
+                    <p id="unique-visitors-count">--</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Page Views</h3>
+                    <p id="total-views-count">--</p>
+                </div>
+            </div>
+        </section>
+
         <section class="form-container">
             <h2>Upload a New Set</h2>
             <form id="upload-form">
@@ -22,7 +36,7 @@
                 <div class="file-inputs">
                     <div>
                         <label for="beforeImage">Before Image:</label>
-                        <input type="file" id="beforeImage" name="beforeImage" accept="image/*" required>
+                        <input type="file" id="beforeImage" name="beforeImage" accept="image/*">
                         <img id="before-preview" class="preview" src="#" alt="Before image preview" />
                     </div>
                     <div>
@@ -37,7 +51,7 @@
         </section>
 
         <section class="gallery-container">
-            <h2>Gallery</h2>
+            <h2>Gallery Management</h2>
             <div id="image-grid">
                 </div>
         </section>
